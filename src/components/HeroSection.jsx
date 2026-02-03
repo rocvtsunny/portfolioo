@@ -1,7 +1,7 @@
 import { ArrowDown } from "lucide-react";
 const photo = [
   {
-    image: "/src/assets/selfie.png",
+    image: "/selfie.png",
   }
 ];
 
