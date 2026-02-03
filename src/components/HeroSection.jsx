@@ -1,4 +1,9 @@
 import { ArrowDown } from "lucide-react";
+const photo = [
+  {
+    image: "/src/assets/selfie.png",
+  }
+];
 
 export const HeroSection = () => {
   return (
@@ -23,10 +28,17 @@ export const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I am a third-year Software Developer Student @ ROC van Twente.
           </p>
-          
-          <div>
-            <img src="/src/assets/selfie.png" alt="Hero Image" className="mx-auto w-48 h-48 rounded-full opacity-0 animate-fade-in-delay-3"/>
-          </div>
+
+          {photo.map((project, key) => (
+            <div
+              key={key}
+            >
+                <img 
+                  src={project.image}
+                  className="mx-auto w-48 h-48 rounded-full opacity-0 animate-fade-in-delay-3"
+                /> 
+            </div>
+          ))}
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
